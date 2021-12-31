@@ -1,0 +1,15 @@
+import java.util.*;
+import javax.swing.*;
+public class Areas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner entrada= new Scanner(System.in);
+		
+		System.out.println("Introduce una opcion: \n1: Cuadrado \n2: Rectangulo \n3:Triangulo \n4:Circulo");
+		
+		
+	}
+
+}

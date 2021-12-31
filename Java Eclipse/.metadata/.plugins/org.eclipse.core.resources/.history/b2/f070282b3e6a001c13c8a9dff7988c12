@@ -1,0 +1,13 @@
+
+public class ManipulacionCadenas {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String nombre="Alex";
+		System.out.println("Mi nombre es: "+nombre);
+		System.out.println("Mi nombre tine: "+nombre.length()+" letras.");
+		System.out.println("La primera letra de "+nombre+" es la "+nombre.charAt(0));
+		
+	}
+
+}

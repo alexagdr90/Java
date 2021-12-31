@@ -1,0 +1,15 @@
+import javax.swing.*;
+public class EntradaEjemplo2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String Nombre_usuario=JOptionPane.showInputDialog("Introduce tu nombre, porfavor");
+		
+		String edad=JOptionPane.showInputDialog("Introduce tu edad, porfavor");
+		
+		System.out.println("Hola "+nombre_usuario+". El año que viene tendras "+(edad+1));
+		
+	}
+
+}

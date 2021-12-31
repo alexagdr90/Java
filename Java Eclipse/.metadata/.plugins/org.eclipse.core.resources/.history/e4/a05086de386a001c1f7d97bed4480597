@@ -1,0 +1,15 @@
+
+public class CalculosConMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//double raiz=Math.sqrt(7);
+		//System.out.println(raiz);
+	
+		float num1=5.44f;
+		int r=Math.round(num1);
+		System.out.println(r);
+	}
+
+}
