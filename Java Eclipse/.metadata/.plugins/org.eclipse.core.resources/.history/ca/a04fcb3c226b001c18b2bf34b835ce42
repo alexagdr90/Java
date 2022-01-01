@@ -1,0 +1,65 @@
+/**
+ * 
+ */
+package poo;
+import java.util.*;
+/**
+ * @author Alex
+ *
+ */
+public class UsoEmpleado {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Empleado empleado1=new Empleado("Alex", 85000, 2022, 01, 01);
+		Empleado empleado2=new Empleado("Juan", 95000, 2021, 02, 02);
+		Empleado empleado3=new Empleado("Maria", 105000, 2019, 03, 03);
+		
+		empleado1.subeSueldo(5);
+		empleado2.subeSueldo(5);
+		empleado3.subeSueldo(5);
+		
+		System.out.println("Nombre: "+empleado1.dameNombre()+" Sueldo: "+empleado1.dameSueldo()
+				+" Fecha de Alta: "+empleado1.dameFechaContrato());
+		
+	}
+
+}
+
+
+class Empleado{
+	
+	public Empleado(String nom, double sue, int agno, int mes, int dia) {
+	
+		nombre=nom;
+		sueldo=sue;
+		GregorianCalendar calendario= new GregorianCalendar(agno, mes-1, dia);
+		altaContrato=calendario.getTime();
+		
+		
+	}
+	
+	public String dameNombre() {// getter
+		return nombre;
+	}
+	
+	public double dameSueldo() {// getter
+		return sueldo;
+	}
+	
+	public Date dameFechaContrato() {// getter
+		return altaContrato;
+	}
+	
+	public void subeSueldo(double porcentaje) {// setter
+		double aumento=sueldo*porcentaje/100;
+		sueldo+=aumento;
+	}
+	
+	private String nombre;
+	private double sueldo;
+	private Date altaContrato;
+	
+}
+

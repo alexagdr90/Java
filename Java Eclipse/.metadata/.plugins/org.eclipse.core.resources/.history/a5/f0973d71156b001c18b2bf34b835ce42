@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package poo;
+
+/**
+ * @author Alex
+ *
+ */
+public class UsoCoche2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Coche2 mi_coche2=new Coche2();
+		
+		//mi_coche2.establece_color();
+		mi_coche2.establece_color("Amarillo");
+		//mi_coche2.color="Rosa";
+		
+		System.out.println(mi_coche2.dime_datos_generale());
+		System.out.println(mi_coche2.dime_color());
+		
+		mi_coche2.configura_asientos("no");
+		System.out.println(mi_coche2.dime_asientos());
+		
+		mi_coche2.configura_climatizador("si");
+		System.out.println(mi_coche2.dime_climatizador());
+		
+		System.out.println(mi_coche2.dime_peso_coche());
+
+		System.out.println("El precio final del coche es "+ mi_coche2.dime_precio_coche()+" Euros");
+
+
+
+	}
+
+}

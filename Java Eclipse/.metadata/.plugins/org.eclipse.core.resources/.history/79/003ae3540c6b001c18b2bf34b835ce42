@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package poo;
+
+/**
+ * @author Alex
+ *
+ */
+public class UsoCoche2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Coche2 mi_coche2=new Coche2();
+		
+		//mi_coche2.establece_color();
+		mi_coche2.establece_color("Amarillo");
+		//mi_coche2.color="Rosa";
+		
+		System.out.println(mi_coche2.dime_color());
+		
+	}
+
+}
