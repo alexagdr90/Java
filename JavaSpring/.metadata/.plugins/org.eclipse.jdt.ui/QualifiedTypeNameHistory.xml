@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Class"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="es.pildoras.IoC.Empleados"/>
+    <fullyQualifiedTypeName name="es.pildoras.IoC.CreacionInformes"/>
+    <fullyQualifiedTypeName name="org.springframework.jdbc.JdbcUpdateAffectedIncorrectNumberOfRowsException"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="es.pildoras.IoC.SecretarioEmpleado"/>
+    <fullyQualifiedTypeName name="es.pildoras.IoC.JefeEmpleado"/>
+    <fullyQualifiedTypeName name="es.pildoras.IoC.DirectorEmpleado"/>
+</qualifiedTypeNameHistroy>

@@ -41,7 +41,9 @@ public class UsoEmpleado {
 		Jefatura jefe_Finanzas=(Jefatura) misEmpleados[5];// casting de objetos
 		jefe_Finanzas.estableceIncentivo(55000);
 		//Jefatura jefe_compras=(Jefatura) misEmpleados[1];// un empleado no es siempre un jefe
-		
+		System.out.println("El jefe "+jefe_Finanzas.dameNombre()+" tiene un bonus de "+
+		jefe_Finanzas.establece_bonus(500));
+		System.out.println(misEmpleados[3].dameNombre()+" tine un bonus de "+misEmpleados[3].establece_bonus(200));
 		/*for(int i=0;i<3;i++) {
 			misEmpleados[i].subeSueldo(5);
 		}
@@ -51,6 +53,21 @@ public class UsoEmpleado {
 					+" Sueldo: "+misEmpleados[i].dameSueldo()
 					+" Fecha de alta: "+misEmpleados[i].dameFechaContrato());
 		}*/
+		
+		/*Empleado director_comercial=new Jefatura("Sandra",85000,2009,12,12);
+		Comparable ejemplo=new Empleado("Elisa",95000,2015,04,04);
+		
+		if(director_comercial instanceof Empleado) {
+			System.out.println("Es de tipo Jefatura");
+		}
+		if(ejemplo instanceof Comparable) {
+			System.out.println("Implementa la interfaz Comparable");
+		}*/
+		
+		//ordenar
+		Arrays.sort(misEmpleados);
+		
+		System.out.println(jefe_Finanzas.tomar_decisiones("Dar mas dias de vacaciones a los empleados"));
 		
 		// for each
 		for(Empleado e: misEmpleados) {
@@ -67,7 +84,7 @@ public class UsoEmpleado {
 }
 
 
-class Empleado{
+class Empleado implements Comparable, Trabajadores{
 	
 	public Empleado(String nom, double sue, int agno, int mes, int dia) {
 	
@@ -101,15 +118,33 @@ class Empleado{
 		sueldo+=aumento;
 	}
 	
+	public int compareTo(Object miObjeto) {
+		Empleado otroEmpleado=(Empleado) miObjeto;
+		
+		if(this.sueldo<otroEmpleado.sueldo) {
+			return -1;
+		}
+		if(this.sueldo<otroEmpleado.sueldo) {
+			return 1;
+		}
+		return 0;
+	
+	}
+	
 	private String nombre;
 	private double sueldo;
 	private Date altaContrato;
+	@Override
+	public double establece_bonus(double gratificacion) {
+		// TODO Auto-generated method stub
+		return Trabajadores.bonus_base+gratificacion;
+	}
 	
 }
 
 
 
-class Jefatura extends Empleado{
+class Jefatura extends Empleado implements Jefes{
 	public Jefatura(String nom, double sue, int agno, int mes, int dia) {
 		super(nom, sue, agno, mes, dia);
 	}
@@ -123,6 +158,20 @@ class Jefatura extends Empleado{
 	}
 	
 	private double incentivo;
+
+	@Override
+	public String tomar_decisiones(String decision) {
+		// TODO Auto-generated method stub
+		return "Un miembro de la direccion a tomado la decision: "+decision;
+	}
+
+	@Override
+	public double establece_bonus(double gratificacion) {
+		// TODO Auto-generated method stub
+		
+		double prima=2000;
+		return Trabajadores.bonus_base+gratificacion+prima;
+	}
 
 	
 	/*class Director extends Jefatura{

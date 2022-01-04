@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package graficos;
+import java.awt.*;
+import javax.swing.*;
+/**
+ * @author Alex
+ *
+ */
+public class PruebaDibuho {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		MarcoConDibujo mimarco=new MarcoConDibujo();
+		mimarco.setVisible(true);
+		mimarco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+	}
+
+}
+
+
+class MarcoConDibujo extends JFrame {
+	
+	public MarcoConDibujo() {
+		
+		setTitle("prueba de Dibujo");
+		setSize(400,400);
+		
+		
+		
+	}
+	
+}
+
+
+
+
+

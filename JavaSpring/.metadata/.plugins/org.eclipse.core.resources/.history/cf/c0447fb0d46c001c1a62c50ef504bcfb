@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package es.pildoras.IoC;
+
+/**
+ * @author Alex
+ *
+ */
+public class UsoEmpleados {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

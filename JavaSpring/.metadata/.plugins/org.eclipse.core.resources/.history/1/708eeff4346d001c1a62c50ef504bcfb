@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package es.pildoras.IoC;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+/**
+ * @author Alex
+ *
+ */
+public class UsoEmpleados {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*
+		// cracion de objetos de tipo empleado
+		
+		Empleados Empleado1=new DirectorEmpleado();
+		
+		// uso de los objetos creados
+		
+		System.out.println(Empleado1.getTareas());
+*/
+	
+		ClassPathXmlApplicationContext contexto= new ClassPathXmlApplicationContext("applicationContext.xml");
+		
+		Empleados Alejandro=contexto.getBean("miEmpleado",Empleados.class);
+		
+		System.out.println(Alejandro.getTareas());
+		
+		contexto,close();
+		
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+
