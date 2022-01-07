@@ -3,6 +3,8 @@
  */
 package es.pildoras.IoC;
 
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
+
 /**
  * @author Alex
  *
@@ -30,10 +32,6 @@ public class DirectorEmpleado implements Empleados {
 		return "Informe creado por el director: "+informeNuevo.getInforme();
 	}
 
-	private String email;
-	
-	private String nombreEmpresa;
-	
 	
 
 	public String getEmail() {
@@ -55,7 +53,25 @@ public class DirectorEmpleado implements Empleados {
 		this.nombreEmpresa = nombreEmpresa;
 	}
 	
+	// metodo init, ejecutar tareas antes de que el bean este disponible
 	
+	public void metodoInicial() {
+		System.out.println("Dentro del metodo init. Aqui irian las tareas a ejecutar "+
+				"antes de que el bean este listo");
+	}
+	
+	// metodo destroy, ejecutar tareas despues de que el bean haya sido utilizado
+	
+	public void metodoFinal() {
+		System.out.println("Dentro del metodo destroy. Aqui irian las tareas a ejecutar "+
+				"despues de utilizar el bean");
+	}
+	
+	
+	
+	private String email;
+	
+	private String nombreEmpresa;
 
 
 

@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+package es.pildoras.pruebasannotations;
+
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * @author Alex
+ *
+ */
+
+@Configuration
+@ComponentScan("es.pildoras.pruebasannotations")
+public class EmpleadosConfig {
+
+}

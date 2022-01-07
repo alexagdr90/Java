@@ -1,0 +1,25 @@
+/**
+ * 
+ */
+package es.pildoras.pruebasannotations;
+import org.springframework.steretype.Component;
+/**
+ * @author Alex
+ *
+ */
+
+@Component("ComercialExperimentado")
+public class ComercialExperimentado implements Empleados {
+
+	public String getTareas() {
+
+		// TODO Auto-generated method stub
+		return "Vender, vender y vender mas";
+	}
+
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return "Informe generado por el comercial";
+	}
+
+}

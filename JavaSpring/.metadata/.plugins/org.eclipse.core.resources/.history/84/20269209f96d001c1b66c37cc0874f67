@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package es.pildoras.pruebasannotations;
+
+/**
+ * @author Alex
+ *
+ */
+public class ComercialExperimentado implements Empleados {
+
+	public String getTareas() {
+
+		// TODO Auto-generated method stub
+		return "Vender, vender y vender mas";
+	}
+
+	public String getInforme() {
+		// TODO Auto-generated method stub
+		return "Informe generado por el comercial";
+	}
+
+}

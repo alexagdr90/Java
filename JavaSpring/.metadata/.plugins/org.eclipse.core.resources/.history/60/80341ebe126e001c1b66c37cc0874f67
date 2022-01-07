@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package es.pildoras.pruebasannotations;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.annotation.IfProfileValue;
+
+/**
+ * @author Alex
+ *
+ */
+public class UsoAnnotations2 {
+
+	// leer el xml de configuracion
+			ClassPathXmlApplicationContext contexto= new ClassPathXmlApplicationContext("applicationContext.xml");
+	
+	// pedir el bin bean
+	
+			Empleados Antonio=contexto.getBean("comercialExperimentado",Empleados.class);
+			
+			Empleados Lucia=contexto.getBean("comercialExperimentado",Empleados.class);
+
+	// ¿apunta al mismo objeto en memoria?
+	
+			if(Antonio==Lucia) {
+				System.out.println("Apuntan al mismo lugar de memori");
+				System.out.println("\n "+Lucia);
+			}else {
+				System.out.println("NO apunta al mismo lugar de memoria");
+				System.out.println("\n "+Lucia);
+
+			}
+	
+			// cerrar el contexto
+			
+			contexto.close();
+}
